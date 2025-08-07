@@ -41,23 +41,6 @@ https://smswithdjango.herokuapp.com/
 5. Send Feedback to HOD
 
 
-## 📸 ScreenShots
-
-<img src="ss/1.png"/>
-<img src="ss/2.png"/>
-<img src="ss/3.png"/>
-<img src="ss/4.png"/>
-<img src="ss/5.png"/>
-
-| Admin| Staff| Student |
-|------|-------|---------|
-|<img src="ss/admin5.png" width="400">|<img src="ss/staff1.png" width="400">|<img src="ss/student1.png" width="400">|
-|<img src="ss/admin2.png" width="400">|<img src="ss/staff2.png" width="400">|<img src="ss/student2.png" width="400">|
-|<img src="ss/admin3.png" width="400">|<img src="ss/staff3.png" width="400">|<img src="ss/student3.png" width="400">|
-|<img src="ss/admin4.png" width="400">|<img src="ss/staff4.png" width="400">|<img src="ss/student4.png" width="400">|
-|<img src="ss/admin1.png" width="400">|<img src="ss/staff5.png" width="400">|<img src="ss/student5.png" width="400">|
-|<img src="ss/admin6.png" width="400">|<img src="ss/staff6.png" width="400">|<img src="ss/student6.png" width="400">|
-
 
 
 ## Support Developer
