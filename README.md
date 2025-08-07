@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Student Management System Created Using Django
 This is a Simple Student Management System Developed While Learning Django.
 Feel free to make changes based on your requirements.
@@ -269,3 +270,6 @@ Password: student
 - https://support.google.com/mail/thread/38519529?hl=en
 - https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
 - https://stackoverflow.com/questions/3429084/why-do-i-get-an-object-is-not-iterable-error
+=======
+# student-management-system
+>>>>>>> 0145ad76c338c78f28d5ee55102c33479d525c92
