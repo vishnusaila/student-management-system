@@ -160,12 +160,25 @@ TIME_ZONE = 'Africa/Lagos'
 # EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 # EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_mails")
 
+
+SECRET_KEY=2#d#t#!0pai9d29&g9g#21u^xo2fp+#t88&_&npcq9jzqa@&3e
+DEBUG=True
+
+EMAIL_ADDRESS='sailavishnuv@gmail.com'
+EMAIL_PASSWORD='vishnu@2004'
+
+RECAPTCHA_SITE_KEY='6Lck7J0rAAAAAGGFOD8Z3yntlAvMj0wIQl5WhrE-'
+RECAPTCHA_SECRET_KEY='6Lck7J0rAAAAAJBdrAFSueVRf0Zbbos3NVV38kJO'
+
+
+
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 
-EMAIL_HOST_USER = os.environ.get('EMAIL_ADDRESS') 
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
+EMAIL_HOST_USER = os.environ.get('sailavishnuv@gmail.com') 
+EMAIL_HOST_PASSWORD = os.environ.get('vishnu@2004')
 EMAIL_USE_TLS = True
 # DEFAULT_FROM_EMAIL = "Student Management System <admin@admin.com>"
 
