@@ -33,13 +33,7 @@ Feel free to make changes based on your requirements.
 
 ---
 
-## 📸 Screenshots
 
-| Admin | Staff | Student |
-|-------|-------|---------|
-| <img src="ss/admin1.png" width="300"> | <img src="ss/staff1.png" width="300"> | <img src="ss/student1.png" width="300"> |
-| <img src="ss/admin2.png" width="300"> | <img src="ss/staff2.png" width="300"> | <img src="ss/student2.png" width="300"> |
-| <img src="ss/admin3.png" width="300"> | <img src="ss/staff3.png" width="300"> | <img src="ss/student3.png" width="300"> |
 
 ---
 
