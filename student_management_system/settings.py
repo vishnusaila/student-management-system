@@ -30,7 +30,12 @@ SECRET_KEY = '2#d#t#!0pai9d29&g9g#21u^xo2fp+#t88&_&npcq9jzqa@&3e'
 DEBUG = False
 
 # ALLOWED_HOSTS = ['smswithdjango.herokuapp.com']
-ALLOWED_HOSTS = ['*']  # Not recommended but useful in dev mode
+ALLOWED_HOSTS = [
+    'web-production-96276.up.railway.app',
+    '127.0.0.1',
+    'localhost'
+]
+ # Not recommended but useful in dev mode
 
 
 # Application definition
@@ -170,3 +175,8 @@ prod_db = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://web-production-96276.up.railway.app"
+]

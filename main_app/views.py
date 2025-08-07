@@ -12,6 +12,8 @@ from .models import Attendance, Session, Subject
 # Create your views here.
 
 
+
+
 def login_page(request):
     if request.user.is_authenticated:
         if request.user.user_type == '1':
@@ -61,7 +63,9 @@ def doLogin(request, **kwargs):
             return redirect("/")
 
 
+from django.views.decorators.csrf import csrf_exempt
 
+@csrf_exempt
 def logout_user(request):
     if request.user != None:
         logout(request)
