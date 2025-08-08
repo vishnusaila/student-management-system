@@ -161,14 +161,14 @@ TIME_ZONE = 'Africa/Lagos'
 # EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_mails")
 
 
-SECRET_KEY=2#d#t#!0pai9d29&g9g#21u^xo2fp+#t88&_&npcq9jzqa@&3e
+SECRET_KEY='2#d#t#!0pai9d29&g9g#21u^xo2fp+#t88&_&npcq9jzqa@&3e'
 DEBUG=True
 
 EMAIL_ADDRESS='sailavishnuv@gmail.com'
 EMAIL_PASSWORD='vishnu@2004'
 
-RECAPTCHA_SITE_KEY='6Lck7J0rAAAAAGGFOD8Z3yntlAvMj0wIQl5WhrE-'
-RECAPTCHA_SECRET_KEY='6Lck7J0rAAAAAJBdrAFSueVRf0Zbbos3NVV38kJO'
+RECAPTCHA_SITE_KEY='6LfFWZ4rAAAAANdKglcPD-vXWLPk1xtb7sAFnZhx'
+RECAPTCHA_SECRET_KEY='6LfFWZ4rAAAAAHvbEMFfeFdj591Luv27DJ4yI8AT'
 
 
 
