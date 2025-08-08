@@ -30,12 +30,8 @@ SECRET_KEY = '2#d#t#!0pai9d29&g9g#21u^xo2fp+#t88&_&npcq9jzqa@&3e'
 DEBUG = False
 
 # ALLOWED_HOSTS = ['smswithdjango.herokuapp.com']
-ALLOWED_HOSTS = [
-    'web-production-96276.up.railway.app',
-    '127.0.0.1',
-    'localhost'
-]
- # Not recommended but useful in dev mode
+ALLOWED_HOSTS = ['student-management-system-9xkm.onrender.com']
+# Not recommended but useful in dev mode
 
 
 # Application definition
