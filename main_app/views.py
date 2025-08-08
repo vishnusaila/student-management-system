@@ -128,3 +128,17 @@ messaging.setBackgroundMessageHandler(function (payload) {
 });
     """
     return HttpResponse(data, content_type='application/javascript')
+
+
+
+import requests
+
+def verify_recaptcha(request):
+    recaptcha_response = request.POST.get('g-recaptcha-response')
+    data = {
+        'secret': settings.RECAPTCHA_SECRET_KEY,
+        'response': recaptcha_response
+    }
+    r = requests.post('https://www.google.com/recaptcha/api/siteverify', data=data)
+    result = r.json()
+    return result.get('success')
