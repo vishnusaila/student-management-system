@@ -4,10 +4,16 @@ services:
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn student_management_system.wsgi:application
+
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: student_management_system.settings
+
       - key: SECRET_KEY
         generateValue: true
+
       - key: DEBUG
         value: False
+
+      - key: DATABASE_URL
+        value: postgresql://sailavishnuvatgmail_com_user:4jNJU3r54QR6XfyKvscdtZL2rE0OZ2Ga@dpg-d2atodmr433s73974k20-a/sailavishnuvatgmail_com
