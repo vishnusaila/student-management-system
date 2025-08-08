@@ -25,29 +25,34 @@ def login_page(request):
     return render(request, 'main_app/login.html')
 
 
+from django.shortcuts import render, redirect
+from django.http import HttpResponse
+from django.contrib.auth import authenticate, login
+from django.contrib import messages
+from django.urls import reverse
+
 def doLogin(request, **kwargs):
     if request.method != 'POST':
         return HttpResponse("<h4>Denied</h4>")
-    else:
     
-        
-        #Authenticate
-        from django.contrib.auth import authenticate
+    # Authenticate user using email as username
+    email = request.POST.get('email')
+    password = request.POST.get('password')
 
-        user = authenticate(request, username=request.POST.get('email'), password=request.POST.get('password'))
+    user = authenticate(request, username=email, password=password)
 
-
-        if user != None:
-            login(request, user)
-            if user.user_type == '1':
-                return redirect(reverse("admin_home"))
-            elif user.user_type == '2':
-                return redirect(reverse("staff_home"))
-            else:
-                return redirect(reverse("student_home"))
+    if user is not None:
+        login(request, user)
+        if user.user_type == '1':
+            return redirect(reverse("admin_home"))
+        elif user.user_type == '2':
+            return redirect(reverse("staff_home"))
         else:
-            messages.error(request, "Invalid details")
-            return redirect("/")
+            return redirect(reverse("student_home"))
+    else:
+        messages.error(request, "Invalid details")
+        return redirect("/")
+
 
 
 from django.views.decorators.csrf import csrf_exempt
