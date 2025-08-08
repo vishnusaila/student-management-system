@@ -1,16 +1,13 @@
-import os
-import django
+# create_admin.py
+from django.contrib.auth import get_user_model
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "student_management_system.settings")
-django.setup()
+User = get_user_model()
 
-from main_app.models import CustomUser
-
-email = "admin@gmail.com"
+email = "admin@example.com"
 password = "admin123"
 
-if not CustomUser.objects.filter(email=email).exists():
-    CustomUser.objects.create_superuser(email=email, password=password)
-    print("✅ Superuser created successfully.")
+if not User.objects.filter(email=email).exists():
+    User.objects.create_superuser(email=email, password=password)
+    print("Superuser created.")
 else:
-    print("⚠️ Superuser already exists.")
+    print("Superuser already exists.")
