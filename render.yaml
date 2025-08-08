@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: studentms
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn student_management_system.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: student_management_system.settings
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: False
