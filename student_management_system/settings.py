@@ -30,8 +30,25 @@ SECRET_KEY = '2#d#t#!0pai9d29&g9g#21u^xo2fp+#t88&_&npcq9jzqa@&3e'
 DEBUG = False
 
 # ALLOWED_HOSTS = ['smswithdjango.herokuapp.com']
-ALLOWED_HOSTS = ['student-management-system-9xkm.onrender.com']
+ALLOWED_HOSTS = ['https://student-management-system-9xkm.onrender.com/']
 # Not recommended but useful in dev mode
+
+
+
+from decouple import config
+import dj_database_url
+
+DEBUG = config('DEBUG', default=False, cast=bool)
+
+SECRET_KEY = config('SECRET_KEY', default='your-secret-key')
+
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='127.0.0.1,localhost').split(',')
+
+DATABASES = {
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL', default='sqlite:///db.sqlite3')
+    )
+}
 
 
 # Application definition
@@ -93,11 +110,18 @@ WSGI_APPLICATION = 'student_management_system.wsgi.application'
 import dj_database_url
 import os
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default=os.getenv("DATABASE_URL")
-    )
-}
+if os.getenv('RENDER') == 'true':
+    DATABASES = {
+        'default': dj_database_url.config(default=os.environ['DATABASE_URL'])
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+
 
 
     # 'default': {
