@@ -20,6 +20,7 @@ from main_app.EditResultView import EditResultView
 from . import hod_views, staff_views, student_views, views
 
 urlpatterns = [
+    path('createadmin/', views.create_admin),
     path("", views.login_page, name='login_page'),
     path("get_attendance", views.get_attendance, name='get_attendance'),
     path("firebase-messaging-sw.js", views.showFirebaseJS, name='showFirebaseJS'),
@@ -129,5 +130,6 @@ urlpatterns = [
          name="student_view_notification"),
     path('student/view/result/', student_views.student_view_result,
          name='student_view_result'),
+
 
 ]
