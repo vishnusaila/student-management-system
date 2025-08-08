@@ -32,7 +32,11 @@ def doLogin(request, **kwargs):
     
         
         #Authenticate
-        user = EmailBackend.authenticate(request, username=request.POST.get('email'), password=request.POST.get('password'))
+        from django.contrib.auth import authenticate
+
+        user = authenticate(request, username=request.POST.get('email'), password=request.POST.get('password'))
+
+
         if user != None:
             login(request, user)
             if user.user_type == '1':
